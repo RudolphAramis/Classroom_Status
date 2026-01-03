@@ -1,0 +1,82 @@
+body {
+    background-color: #ebe4d1;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#formattedTime{
+    text-align: center;
+    font-size: 112px;
+}
+
+#time{
+    text-align: center;
+}
+
+#timeMinutes{
+    text-align: center;
+}
+
+.time{
+    justify-content: center;
+    align-items: center;
+}
+
+.status {
+    display: flex;
+    height: 45px;
+    width: 45px;
+    border-radius: 30%;
+    background-color: #d80b0b;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+button {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    border: 2px solid #000000;
+}
+
+.timeButtons{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#pauseContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pauseButton{
+    flex-grow: 0;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.addTime{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addMinute{
+    flex-grow:0;
+    font-size: 15px;
+}
+#minusMinute{
+    flex-grow:0;
+    font-size: 15px;
+
+}
