@@ -1,6 +1,7 @@
 body {
-    background-color: #ebe4d1;
+    background-color: #75cfc9;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* former background-color: #ebe4d1; */
 }
 
 #formattedTime{
@@ -64,6 +65,7 @@ button {
     flex-grow: 0;
     padding: 5px 10px;
     font-size: 20px;
+    border-radius: 10px;
 }
 
 .addTime{
@@ -75,9 +77,19 @@ button {
 #addMinute{
     flex-grow:0;
     font-size: 15px;
+    border-radius: 10px 0 0 10px;
 }
 #minusMinute{
     flex-grow:0;
     font-size: 15px;
+    border-radius: 0 10px 10px 0;
 
+}
+
+#fortyMinutes{
+    border-radius: 20px 0 0 20px;
+}
+
+#fiveMinutes{
+    border-radius: 0 20px 20px 0;
 }

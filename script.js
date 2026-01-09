@@ -58,9 +58,10 @@ function assignListeners(){
 
 //Begins the countdown, if the time in seconds is above zero, it will display the time and put the seconds and minutes in the html.
 function beginTimerSeconds(){
-    if (timerSeconds < 0){
+    if (timerSeconds <= 0){
+        formattedTime.textContent = "Time is up!";
         clearInterval(intervalId);
-        formattedTime.textContent = "Time is up!"
+
     }
     else {
         clock.textContent = "Seconds remaining: " + (timerSeconds - 1) ;
