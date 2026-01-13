@@ -25,7 +25,8 @@ track of student work much easier, which led to a decline in graded work backlog
 
 Changelog:
 v.1.2.1: Added a "add student button"
-v.1.2.2: Made the webpage nicer to look at.\
+v.1.2.2: Made the webpage nicer to look at.
+v.1.2.3: Added a "remove student button"
 
 Future implementations:
-  Currently, it is planned to add a feature that allows teachers/users to remove the number of students to accommodate classroom size. For additional suggestions, please contact Rudy :)
+  Currently, I am looking into the possibility of customization options, including user presets. Please be patient as I learn how to work with databases. I am a teacher. For additional suggestions, please contact Rudy :)
