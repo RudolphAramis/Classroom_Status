@@ -100,3 +100,7 @@ button {
 #removeStudent{
     border-radius: 0 20px 20px 0;
 }
+
+button:active{
+    background-color:#ffffffb5;
+}

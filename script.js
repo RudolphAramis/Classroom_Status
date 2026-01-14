@@ -5,7 +5,7 @@
 //Day IDK: Set up a pause/resume button and got it working.
 //Day IDK +1: added a +/- time button.
 //Day X: This is now a living document. I will no longer record daily changes. Old days will be kept on here since I am sentimental.
-//Known bugs: pressing the pause button with no time causes NaN to be displayed everywhere. <- This one fixed itself somehow. Timer goes into negative numbers for a second when it is finished. Pausing the timer and adding time will not display the change.
+//Known bugs: pressing the pause button with no time causes NaN to be displayed everywhere. <- This one fixed itself somehow. Pausing the timer and adding time will not display the change.
 // Page setup
 let clock = document.getElementById("time");
 let clock2 = document.getElementById("timeMinutes");
@@ -25,6 +25,7 @@ pauseButton.addEventListener('click', function(){pauseStatus += 1;
     clearInterval(intervalId);
     pauseButton.textContent = "Paused";
 } else{
+    clearInterval(intervalId);
     intervalId = setInterval(beginTimerSeconds, 1000);
     pauseButton.textContent = "Pause | Resume";
 }
@@ -32,8 +33,12 @@ pauseButton.addEventListener('click', function(){pauseStatus += 1;
 // Creates the add/remove time button
 let addMinute = document.getElementById("addMinute");
 let minusMinute = document.getElementById("minusMinute");
-addMinute.addEventListener('click', function(){timerMinutes += 1; timerSeconds +=60;});
-minusMinute.addEventListener('click', function(){timerMinutes -= 1; timerSeconds -=60;});
+addMinute.addEventListener('click', function(){timerMinutes += 1; timerSeconds +=60; 
+    clock.textContent = "Seconds remaining: " + timerSeconds;
+    });
+minusMinute.addEventListener('click', function(){timerMinutes -= 1; timerSeconds -=60;
+    clock.textContent = "Seconds remaining: " + timerSeconds;
+});
 
 
 // Creates a loop that puts all of the time buttons in an array and gives them a listener
@@ -46,11 +51,12 @@ function assignListeners(){
             const seconds = Number(timeButton.textContent) * 60;
             // const minutes = Number(timeButton.textContent);
             timerSeconds = seconds;
-            //I don't know what the code below does but removing it breaks the timer
             timerMinutes = timerSeconds % 60;
             clock2.textContent = timerMinutes;
             clock.textContent = timerSeconds;
             intervalId = setInterval(beginTimerSeconds, 1000);
+            pauseButton.textContent = "Pause | Resume";
+            pauseStatus = 1;
         });
     }
 }
