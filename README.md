@@ -27,6 +27,7 @@ Changelog:
 v.1.2.1: Added a "add student button"
 v.1.2.2: Made the webpage nicer to look at.
 v.1.2.3: Added a "remove student button"
+v.1.2.4: A lot of bug fixes
 
 Future implementations:
   Currently, I am looking into the possibility of customization options, including user presets. Please be patient as I learn how to work with databases. I am a teacher. For additional suggestions, please contact Rudy :)
