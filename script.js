@@ -13,6 +13,7 @@ let formattedTime = document.getElementById("formattedTime");
 let intervalId = null;
 assignListeners();
 assignChangers();
+directionsEditable();
 let timerSeconds = "Seconds remaining:";
 let timerMinutes = "Minutes remaining:";
 clock2.textContent = timerMinutes;
@@ -139,5 +140,18 @@ function removeStudent(){
     } else {
     statusContainer.removeChild(removedStudent);
     numberStudents -= 1;
+    }
+}
+
+// Making the color/status meanings editable for use in various contexts
+function directionsEditable(){
+    const directions = document.getElementsByClassName("directions");
+    for (let step of directions){
+        step.addEventListener('click', function(){
+            newStep = prompt("What would you like this color to mean?");
+            if (newStep !== null){
+                step.textContent = newStep;
+            }
+        });
     }
 }
