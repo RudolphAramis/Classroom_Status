@@ -1,5 +1,7 @@
 Portfolio piece.
 
+How to use: Intended for local digital whiteboard / SMARTboard / Promethean Board dispaly and use. Select a timer from the given buttons. Every student should correlate with a number, increase students as needed. Change the text content of the three color indicators as needed by clicking and typing. As students progress through their work, they can click their number on the digital whiteboard. There is a color theme preset for teachers/users. NO PPI IS STORED IN ANY CAPACITY.
+
 Problem: Students falling behind on assignments. 
   Math lesson structure demands working in intensive small-groups while also providing scaffolding to non-small group students and monitoring work completion for learners at skill 
 levels ranging from WELL BELOW AVERAGE to WELL ABOVE AVERAGE. Lesson structure consists of mini-lesson followed by independent practice and math workshop/stations, with the teacher expected 
@@ -28,8 +30,9 @@ v.1.2.1: Added a "add student button"
 v.1.2.2: Made the webpage nicer to look at.
 v.1.2.3: Added a "remove student button"
 v.1.2.4: A lot of bug fixes (this also broke the readme?)
-v.1.3.0: You can now click on the color/status messages to change the text. I don't know what the DS_storage file is and I can't figure out how to delete it.
-Note: Something broke and I can't fix it.
+v.1.3.0: You can now click on the color/status messages to change the text. A DS_storage file was added and I don't know what it is and I can't figure out how to delete it.
+Note: Something broke and I can't fix it. Pages site has been disabled. GitHub support has not helped. Current site will be moved to another hosting service.
+v.2.2.0: Color themes have been added. I am still working on hosting the site on something other than GitHub Pages.
 
 Future implementations:
-  Currently, I am looking into the possibility of customization options, including user presets. Please be patient as I learn how to work with databases. I am a teacher. For additional suggestions, please contact Rudy :)
+  Currently, I am looking into the saving the number of current number of students. Please be patient as I learn how to work with databases. I am a teacher. For additional suggestions, please contact Rudy :)
