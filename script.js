@@ -1,11 +1,5 @@
 
-
-//Day 3 progress: Debugged the timer desync. Did it by clearing IntervalId in the function during assiginging a listener then setting the intervalId as the interval that begins
-//Day 4: Set up the status monitor for the numbers, made the buttons take up space.
-//Day IDK: Set up a pause/resume button and got it working.
-//Day IDK +1: added a +/- time button.
-//Day X: This is now a living document. I will no longer record daily changes. Old days will be kept on here since I am sentimental.
-//Known bugs: pressing the pause button with no time causes NaN to be displayed everywhere. <- This one fixed itself somehow. Pausing the timer and adding time will not display the change.
+//Day X: This is now a living document. I will no longer record daily changes. GitHub pages broke this, and support didn't help me, so I am having to look into what I can do about this.
 // Page setup
 let clock = document.getElementById("time");
 let clock2 = document.getElementById("timeMinutes");
@@ -18,6 +12,8 @@ let timerSeconds = "Seconds remaining:";
 let timerMinutes = "Minutes remaining:";
 clock2.textContent = timerMinutes;
 clock.textContent = timerSeconds;
+
+
 // Creates the pause button
 let pauseButton = document.getElementById("pauseButton");
 let pauseStatus = 1;
@@ -150,8 +146,59 @@ function directionsEditable(){
         step.addEventListener('click', function(){
             newStep = prompt("What would you like this color to mean?");
             if (newStep !== null){
-                step.textContent = newStep;
+                step.textContent = newStep + " ✎";
             }
         });
     }
+}
+
+// Creates the themes. If a theme is selected from a previous session, loads that theme
+const currentTheme = document.getElementById("presetThemes");
+currentTheme.addEventListener('change',changeTheme);
+currentTheme.value = localStorage.getItem('savedTheme');
+changeTheme();
+
+function changeTheme(){
+    let themeSelected = currentTheme.value;
+    if (themeSelected == "defaultTheme"){
+        applyDefaultTheme();
+    }
+    else if (themeSelected == "quietEveningTheme"){
+        applyQuietEveningTheme();
+    }
+    else if (themeSelected == "velvetRoseTheme"){
+        applyVelvetRoseTheme();
+    }
+    else if (themeSelected == "firstStarsTheme"){
+        applyFirstStarsTheme();
+    }
+    else if (themeSelected == "camelliaTheme"){
+        applyCamelliaTheme();
+    }
+    localStorage.setItem("savedTheme", themeSelected);
+}
+
+function applyDefaultTheme(){
+    document.body.style.backgroundColor = "#75cfc9";
+    document.body.style.color = "#000000";
+}
+
+function applyQuietEveningTheme(){
+    document.body.style.backgroundColor = "#4a3e5f";
+    document.body.style.color = "#FFFFFF";
+}
+
+function applyVelvetRoseTheme(){
+    document.body.style.backgroundColor = "#820808";
+    document.body.style.color = "#FFFFFF";
+}
+
+function applyFirstStarsTheme(){
+    document.body.style.backgroundColor = "#2d326e";
+    document.body.style.color = "#FFFFFF";
+}
+
+function applyCamelliaTheme(){
+    document.body.style.backgroundColor = "#fb9ed6";
+    document.body.style.color = "#000000";
 }

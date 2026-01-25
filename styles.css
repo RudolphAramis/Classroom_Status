@@ -31,6 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
+    border: 1px solid #FFFFFF;
 }
 
 .statusContainer{
@@ -103,4 +104,8 @@ button {
 
 button:active{
     background-color:#ffffffb5;
+}
+
+#presetThemes{
+    font-size: 12px;
 }

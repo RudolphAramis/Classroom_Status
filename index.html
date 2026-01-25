@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <!-- If you can read this, I wanted to let you know that I am sorry that GitHub Pages is not cooperating with my site.
+    It is a very simple web app that runs nothing fancy or special, but I'm not able to host it on Pages anymore.
+    I am very sorry that I cannot provide you with a functioning webpage for this portfolio piece (yet), but I hope that you can still enjoy! -->
     <head>
         <title>Classroom Status</title>
         <meta charset="UTF-8">
@@ -12,7 +15,15 @@
 
 <body>
     <h1>Classroom Status</h1>
-    <h6>Developed by Mr. Rudolph Fonseca - Local build v2.1.0 - I hope this works!</h6>
+    <h6>Developed by Mr. Rudolph Fonseca - Local build v2.2.0</h6>
+    <label for="presetThemes">Preset Themes</label>
+    <select id="presetThemes" class="presetThemes">
+        <option value="defaultTheme" id="defaultTheme">Turquoise (default)</option>
+        <option value="quietEveningTheme" id="quietEveningTheme">Quiet Evening</option>
+        <option value="velvetRoseTheme" id="velvetRoseTheme">Velvet Rose</option>
+        <option value="firstStarsTheme" id="firstStarsTheme">First Stars</option>
+        <option value="camelliaTheme" id="camelliaTheme">Camellia</option>
+    </select>
     <h2>Timer</h2>
     <p id="formattedTime">00:00</p>
     <div id="pauseContainer"><button id="pauseButton">Pause | Resume</button> </div>
@@ -25,9 +36,9 @@
         </div>
     <br>
     <h2>Classroom Status:</h2>
-    <p style="color: #d80b0b">Red = <span class="directions">I am not done with the assigned work yet.</span></p>
-    <p style="color: #0b42d8">Blue = <span class="directions">I am working on incomplete/missing work, including station work.</span></p>
-    <p style="color: #168400ff">Green = <span class="directions">I am done with everything! I am now working on Reflex/Frax.</span></p>
+    <p style="color: #d80b0b">Red = <span class="directions">I am not done with the assigned work yet. ✎</span></p>
+    <p style="color: #0b42d8">Blue = <span class="directions">I am working on incomplete/missing work, including station work. ✎</span></p>
+    <p style="color: #168400ff">Green = <span class="directions">I am done with everything! I am now working on Reflex/Frax. ✎</span></p>
     <span> <button id="addStudent">Add student</button><button id="removeStudent">Remove student</button></span>
 
     <div class="statusContainer">
